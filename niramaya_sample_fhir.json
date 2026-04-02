@@ -1,0 +1,229 @@
+{
+  "resourceType": "Bundle",
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "type": "collection",
+  "timestamp": "2026-03-22T12:08:00+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-001",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-001",
+        "identifier": [
+          {
+            "system": "urn:in:pathlabs:patient-id",
+            "value": "2600647306"
+          }
+        ],
+        "name": [
+          {
+            "text": "Mr. RAJARIKAM JAGAN",
+            "use": "official"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1966"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dr-001",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "dr-001",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11502-2",
+              "display": "Laboratory report"
+            }
+          ],
+          "text": "Final Test Report"
+        },
+        "subject": { "reference": "Patient/patient-001" },
+        "effectiveDateTime": "2026-03-22T10:06:00+05:30",
+        "issued": "2026-03-22T12:08:00+05:30",
+        "performer": [{ "display": "Niramaya Pathlabs - HYDERABAD" }],
+        "identifier": [
+          {
+            "system": "urn:in:pathlabs:sid",
+            "value": "26071702"
+          }
+        ],
+        "basedOn": [{ "display": "Referred by: MEDIBUDDY" }],
+        "result": [
+          { "reference": "Observation/obs-haemoglobin" },
+          { "reference": "Observation/obs-wbc" },
+          { "reference": "Observation/obs-neutrophils" },
+          { "reference": "Observation/obs-lymphocytes" },
+          { "reference": "Observation/obs-eosinophils" },
+          { "reference": "Observation/obs-monocytes" },
+          { "reference": "Observation/obs-basophils" },
+          { "reference": "Observation/obs-pcv" },
+          { "reference": "Observation/obs-rbc" },
+          { "reference": "Observation/obs-mcv" },
+          { "reference": "Observation/obs-mch" },
+          { "reference": "Observation/obs-mchc" },
+          { "reference": "Observation/obs-platelets" },
+          { "reference": "Observation/obs-abs-neutrophils" },
+          { "reference": "Observation/obs-abs-lymphocytes" },
+          { "reference": "Observation/obs-abs-eosinophils" },
+          { "reference": "Observation/obs-abs-monocytes" },
+          { "reference": "Observation/obs-abs-basophils" },
+          { "reference": "Observation/obs-rdw-cv" },
+          { "reference": "Observation/obs-rdw-sd" },
+          { "reference": "Observation/obs-pdw" },
+          { "reference": "Observation/obs-mpv" },
+          { "reference": "Observation/obs-pct" },
+          { "reference": "Observation/obs-hba1c" },
+          { "reference": "Observation/obs-eag" },
+          { "reference": "Observation/obs-total-cholesterol" },
+          { "reference": "Observation/obs-triglycerides" },
+          { "reference": "Observation/obs-hdl" },
+          { "reference": "Observation/obs-ldl" },
+          { "reference": "Observation/obs-vldl" },
+          { "reference": "Observation/obs-chol-hdl-ratio" },
+          { "reference": "Observation/obs-ldl-hdl-ratio" },
+          { "reference": "Observation/obs-non-hdl" },
+          { "reference": "Observation/obs-hdl-ldl-ratio" },
+          { "reference": "Observation/obs-bilirubin-total" },
+          { "reference": "Observation/obs-bilirubin-direct" },
+          { "reference": "Observation/obs-bilirubin-indirect" },
+          { "reference": "Observation/obs-ast" },
+          { "reference": "Observation/obs-alt" },
+          { "reference": "Observation/obs-alp" },
+          { "reference": "Observation/obs-ggt" },
+          { "reference": "Observation/obs-total-protein" },
+          { "reference": "Observation/obs-albumin" },
+          { "reference": "Observation/obs-globulin" },
+          { "reference": "Observation/obs-ag-ratio" },
+          { "reference": "Observation/obs-bun" },
+          { "reference": "Observation/obs-creatinine" },
+          { "reference": "Observation/obs-uric-acid" },
+          { "reference": "Observation/obs-egfr" },
+          { "reference": "Observation/obs-urea" },
+          { "reference": "Observation/obs-t3" },
+          { "reference": "Observation/obs-t4" },
+          { "reference": "Observation/obs-tsh" },
+          { "reference": "Observation/obs-crp" }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-haemoglobin",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-haemoglobin",
+        "status": "final",
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" }] }],
+        "code": {
+          "coding": [{ "system": "http://loinc.org", "code": "718-7", "display": "Hemoglobin [Mass/volume] in Blood" }],
+          "text": "Haemoglobin"
+        },
+        "subject": { "reference": "Patient/patient-001" },
+        "effectiveDateTime": "2026-03-22T12:08:00+05:30",
+        "valueQuantity": { "value": 14.4, "unit": "g/dL", "system": "http://unitsofmeasure.org" },
+        "referenceRange": [{ "text": "13.0 - 17.0" }],
+        "interpretation": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "N", "display": "Normal" }] }],
+        "method": { "text": "Photometry" },
+        "specimen": { "display": "EDTA BLOOD" },
+        "extension": [{ "url": "urn:in:pathlabs:section", "valueString": "HAEMATOLOGY" }, { "url": "urn:in:pathlabs:subsection", "valueString": "Complete blood count" }]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-hba1c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-hba1c",
+        "status": "final",
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" }] }],
+        "code": {
+          "coding": [{ "system": "http://loinc.org", "code": "4548-4", "display": "Hemoglobin A1c/Hemoglobin.total in Blood" }],
+          "text": "Glycosylated Haemoglobin (HbA1c)"
+        },
+        "subject": { "reference": "Patient/patient-001" },
+        "effectiveDateTime": "2026-03-22T12:08:00+05:30",
+        "valueQuantity": { "value": 6.2, "unit": "%", "system": "http://unitsofmeasure.org" },
+        "referenceRange": [{ "text": "Normal : < 5.7 | Prediabetic : 5.7-6.4 | Diabetic : >= 6.5" }],
+        "interpretation": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "H", "display": "High" }] }],
+        "method": { "text": "Immunoturbidimetric" },
+        "specimen": { "display": "EDTA BLOOD" },
+        "extension": [{ "url": "urn:in:pathlabs:section", "valueString": "BIOCHEMISTRY" }, { "url": "urn:in:pathlabs:subsection", "valueString": "HbA1c" }]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-total-cholesterol",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-total-cholesterol",
+        "status": "final",
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" }] }],
+        "code": {
+          "coding": [{ "system": "http://loinc.org", "code": "2093-3", "display": "Cholesterol [Mass/volume] in Serum or Plasma" }],
+          "text": "Cholesterol, Total"
+        },
+        "subject": { "reference": "Patient/patient-001" },
+        "effectiveDateTime": "2026-03-22T12:08:00+05:30",
+        "valueQuantity": { "value": 210.0, "unit": "mg/dL", "system": "http://unitsofmeasure.org" },
+        "referenceRange": [{ "text": "Desirable : <200 | Borderline high : 200-239 | High : >239" }],
+        "interpretation": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "H", "display": "High" }] }],
+        "method": { "text": "Enzymatic : CHOD-PAP" },
+        "specimen": { "display": "Serum" },
+        "extension": [{ "url": "urn:in:pathlabs:section", "valueString": "BIOCHEMISTRY" }, { "url": "urn:in:pathlabs:subsection", "valueString": "Lipid Profile" }]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-tsh",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-tsh",
+        "status": "final",
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" }] }],
+        "code": {
+          "coding": [{ "system": "http://loinc.org", "code": "3016-3", "display": "Thyrotropin [Units/volume] in Serum or Plasma" }],
+          "text": "TSH"
+        },
+        "subject": { "reference": "Patient/patient-001" },
+        "effectiveDateTime": "2026-03-22T12:08:00+05:30",
+        "valueQuantity": { "value": 2.760, "unit": "uIU/ml", "system": "http://unitsofmeasure.org" },
+        "referenceRange": [{ "text": "0.270 - 5.350" }],
+        "interpretation": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "N", "display": "Normal" }] }],
+        "method": { "text": "ECLIA" },
+        "specimen": { "display": "Serum" },
+        "extension": [{ "url": "urn:in:pathlabs:section", "valueString": "IMMUNOLOGY" }, { "url": "urn:in:pathlabs:subsection", "valueString": "Thyroid function tests" }]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-crp",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-crp",
+        "status": "final",
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" }] }],
+        "code": {
+          "coding": [{ "system": "http://loinc.org", "code": "1988-5", "display": "C reactive protein [Mass/volume] in Serum or Plasma" }],
+          "text": "CRP"
+        },
+        "subject": { "reference": "Patient/patient-001" },
+        "effectiveDateTime": "2026-03-22T12:08:00+05:30",
+        "valueQuantity": { "value": 1.0, "unit": "mg/L", "system": "http://unitsofmeasure.org" },
+        "referenceRange": [{ "text": "< 5.0" }],
+        "interpretation": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "N", "display": "Normal" }] }],
+        "specimen": { "display": "Serum" },
+        "extension": [{ "url": "urn:in:pathlabs:section", "valueString": "SEROLOGY" }]
+      }
+    }
+  ]
+}

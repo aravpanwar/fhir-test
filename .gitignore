@@ -1,0 +1,14 @@
+# Never commit real patient data
+samples/input/*.pdf
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# API keys
+.env
+*.env
